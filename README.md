@@ -11,6 +11,6 @@ python chatbot_new.py #set save=True
 ## 2.run guardrails_question.ipynb 
 ## 3. 
 ```
-#set chatbot_new.py save=True
+#set chatbot_new.py save=False
 #python run_new.py
 ```
