@@ -23,7 +23,7 @@ from rich.style import Style
 from rich.theme import Theme
 
 import os
-nvidia_api_key = "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"
+nvidia_api_key = "{your api key}"
 # nvidia_api_key = "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"
 # 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
 assert nvidia_api_key.startswith("nvapi-"), f"{nvidia_api_key[:5]}... is not a valid key"
