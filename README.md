@@ -12,5 +12,5 @@ python chatbot_new.py #set save=True
 ## 3. 
 ```
 #set chatbot_new.py save=False
-#python run_new.py
+python run_new.py
 ```
