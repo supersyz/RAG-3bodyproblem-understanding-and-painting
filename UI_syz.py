@@ -1,7 +1,7 @@
 import gradio as gr
 from PIL import Image
 from chatbot_new import chat_gen
-from draw import l2s_chain,text2img_chain
+from draw_syz import l2s_chain,text2img_chain
 # 全局respond，传给图像
 # glob_respond = "start"
 glob_response = None
@@ -12,8 +12,11 @@ def text_echo(message, history):
     # 根据message, history得到回复
     # respond = fn(message, history)
     global glob_response
-    glob_response = chat_gen(message)
-    respond= glob_response
+
+
+    glob_response = chat_gen(message,history,)
+   # print(type(glob_response))
+    respond= ''.join(list(glob_response)[-1])
     return respond
 
 def image_echo():

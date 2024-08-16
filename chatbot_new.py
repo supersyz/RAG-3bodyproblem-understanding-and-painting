@@ -23,7 +23,7 @@ from rich.style import Style
 from rich.theme import Theme
 
 import os
-nvidia_api_key = "{your api key}"
+nvidia_api_key = "{your key}"
 # nvidia_api_key = "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"
 # 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
 assert nvidia_api_key.startswith("nvapi-"), f"{nvidia_api_key[:5]}... is not a valid key"
@@ -103,7 +103,7 @@ from langchain_community.vectorstores import FAISS
 
 # embedder = NVIDIAEmbeddings(model="nvidia/embed-qa-4", truncate="END")
 
-docstore = FAISS.load_local("docstore_index", embedder)
+docstore = FAISS.load_local("docstore_index", embedder,)
 # docstore = FAISS.load_local("docstore_index", embedder, allow_dangerous_deserialization=True)
 docs = list(docstore.docstore._dict.values())
 
@@ -248,8 +248,8 @@ def chat_gen(message, history=[], return_buffer=True):
     # # return responsse
 
 ## Start of Agent Event Loop
-test_question = "Tell me about the book <The Three-body Problem>!"  ## <- modify as desired
+# test_question = "Tell me about the book <The Three-body Problem>!"  ## <- modify as desired
 
-## Before you launch your gradio interface, make sure your thing works
+# ## Before you launch your gradio interface, make sure your thing works
 # for response in chat_gen(test_question, return_buffer=False):
 #     print(response, end='')

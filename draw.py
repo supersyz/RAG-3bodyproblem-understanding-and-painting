@@ -7,7 +7,7 @@ from PIL import Image
 
 
 import os
-nvidia_api_key = "{your key}"
+nvidia_api_key = "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"
 assert nvidia_api_key.startswith("nvapi-"), f"{nvidia_api_key[:5]}... is not a valid key"
 os.environ["NVIDIA_API_KEY"] = nvidia_api_key
 
@@ -17,7 +17,7 @@ import requests
 invoke_url = "https://ai.api.nvidia.com/v1/genai/stabilityai/sdxl-turbo"
 
 headers = {
-    "Authorization": "Bearer {your key}",
+    "Authorization": "Bearer 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",
     "Accept": "application/json",
 }
 
@@ -86,7 +86,7 @@ from langchain.schema.runnable import RunnableLambda
 text2img_chain = (img_gen 
                   | RunnableLambda(lambda x:x.response_metadata['artifacts'][0]['base64']) 
                   | to_pil_img)
-res = text2img_chain.invoke("an intelligent and persistent individual who has been deeply affected by the political turmoil of her time. She is driven by a desire to comprehend the universe and to discover meaning in her life, even if it means challenging the established authorities.")
+#res = text2img_chain.invoke("an intelligent and persistent individual who has been deeply affected by the political turmoil of her time. She is driven by a desire to comprehend the universe and to discover meaning in her life, even if it means challenging the established authorities.")
 if __name__ == '__main__':
     res.show()
 
