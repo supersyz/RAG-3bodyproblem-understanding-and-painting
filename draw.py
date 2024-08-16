@@ -7,7 +7,7 @@ from PIL import Image
 
 
 import os
-nvidia_api_key = "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"
+nvidia_api_key = "{your key}"
 assert nvidia_api_key.startswith("nvapi-"), f"{nvidia_api_key[:5]}... is not a valid key"
 os.environ["NVIDIA_API_KEY"] = nvidia_api_key
 
@@ -17,7 +17,7 @@ import requests
 invoke_url = "https://ai.api.nvidia.com/v1/genai/stabilityai/sdxl-turbo"
 
 headers = {
-    "Authorization": "Bearer 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",
+    "Authorization": "Bearer {your key}",
     "Accept": "application/json",
 }
 
