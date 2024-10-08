@@ -1,6 +1,9 @@
 # RAG-3bodyproblem-understanding-and-painting
-NVIDIA-10th-HACKATHON: NIM-based RAG
-look at the report xxx.docx in the root dir
+NIM-based RAG
+
+
+# dependencies:
+in requirements.txt
 
 # run:
 ## 1.
@@ -14,3 +17,6 @@ python chatbot_new.py #set save=True
 #set chatbot_new.py save=False
 python UI_syz.py
 ```
+
+# docs and demo:
+项目报告模板
